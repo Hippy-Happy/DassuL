@@ -1,1 +1,1 @@
-# A3_hatespeech
+# Flask Rest API
