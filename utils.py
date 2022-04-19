@@ -26,22 +26,42 @@ class LoadDataset(Dataset):
   
     def __getitem__(self, idx):
         row = self.df.iloc[idx, :].values
-        text = row[0]
-        y = row[1]
+        # target이 없는경우 (즉, 문장만 입력된 경우)
+        if len(row) <= 1:
+            text = row[0]
 
-        inputs = self.tokenizer(
-            text, 
-            return_tensors='pt',
-            truncation=True,
-            max_length=200,
-            pad_to_max_length=True,
-            add_special_tokens=True
-            )
-        
-        input_ids = inputs['input_ids'][0].to(device)
-        attention_mask = inputs['attention_mask'][0].to(device)
+            inputs = self.tokenizer(
+                text, 
+                return_tensors='pt',
+                truncation=True,
+                max_length=50,
+                pad_to_max_length=True,
+                add_special_tokens=True
+                )
+            
+            input_ids = inputs['input_ids'][0]
+            attention_mask = inputs['attention_mask'][0]
 
-        return input_ids, attention_mask, y
+            return input_ids, attention_mask     
+            
+        # target이 있는 경우 (원래 코드)
+        else:
+            text = row[0]
+            y = row[1]
+
+            inputs = self.tokenizer(
+                text, 
+                return_tensors='pt',
+                truncation=True,
+                max_length=50,
+                pad_to_max_length=True,
+                add_special_tokens=True
+                )
+            
+            input_ids = inputs['input_ids'][0]
+            attention_mask = inputs['attention_mask'][0]
+
+            return input_ids, attention_mask, y
     
 def clean_text(text, tokenizer):
     sentence_df = pd.DataFrame([text], columns=['문장'])
@@ -54,7 +74,7 @@ def clean_text(text, tokenizer):
 def find_label(data):
     labels = ''
     for col in range(0, 10):
-        if data.iloc[0,col] >= 0.8:
+        if data.iloc[0,col] >= [0.8]:
             labels = labels + str(col)
             if col == 7:
                 labels = ''
