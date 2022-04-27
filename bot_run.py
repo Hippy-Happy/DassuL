@@ -39,7 +39,7 @@ async def on_message(message):
             await message.delete()
             await message.channel.send(f'{message.author.mention} 나쁜말 하지마')
 
-        if result['prediction'] != '이 문장은 깨끗합니다!!':
+        if result['prediction'] != ' 이 문장은 깨끗합니다! ':
             out = result['prediction']
             await message.delete()
             await(message.channel.send(f'{message.author.mention} {out}'))
