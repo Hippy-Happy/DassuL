@@ -29,14 +29,20 @@ async def on_message(message):
         # Flask 서버로 message 전송
         user_info = message.author.name
         text = message.content
-        data = {'UserInfo': user_info, 'text': text}
+        data = {"UserInfo": user_info, "text": text}
         response = requests.post(API_URL, json=data)
         result = json.loads(response.text)
         print(result)
+
         # Flask 서버 return 값이 1이라면
         if result['prediction'] == 1:
             await message.delete()
             await message.channel.send(f'{message.author.mention} 나쁜말 하지마')
+
+        if result['prediction'] != '이 문장은 깨끗합니다!!':
+            out = result['prediction']
+            await message.delete()
+            await(message.channel.send(f'{message.author.mention} {out}'))
 
 bot.run('OTY0MDMxMTE1NjEyNTM2OTAy.Ylet8A.5C-ld5IiYeUKHARLDdL45j_GRaM')
 
