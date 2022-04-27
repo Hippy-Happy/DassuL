@@ -1,5 +1,0 @@
-modelzoo-client[transformers]
-pandas
-scikit-learn
-flask
-requests
