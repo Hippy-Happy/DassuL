@@ -2,7 +2,7 @@ import itertools
 from utils import clean_text, LoadDataset, find_label
 import torch
 from train_ml import Deserialization, evaluate
-from transformers import ElectraTokenizer
+from transformers import ElectraTokenizerFast
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -15,7 +15,7 @@ class ModelHandler:
         device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
         Deserialization()
         print('De-Serialization clear')
-        self.tokenizer = ElectraTokenizer.from_pretrained("monologg/koelectra-small-v2-discriminator")
+        self.tokenizer = ElectraTokenizerFast.from_pretrained("kykim/electra-kor-base")
         print('tokenizer initialized')
 
     def preprocess(self, text):
