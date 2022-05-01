@@ -6,7 +6,7 @@ Created on Fri Apr 15 17:26:33 2022
 """
 
 import unicodedata
-from transformers import ElectraModel, ElectraTokenizer
+from transformers import ElectraModel, ElectraTokenizerFast
 from torch.utils.data import DataLoader, Dataset
 import pandas as pd
 import numpy as np

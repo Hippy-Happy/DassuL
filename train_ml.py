@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from transformers import ElectraModel, ElectraTokenizer
+from transformers import ElectraModel, ElectraTokenizerFast
 from transformers import ElectraForSequenceClassification, AdamW
 import torch
 import torch.nn as nn
@@ -15,21 +15,21 @@ load = []
 
 
 def Deserialization():
-    models = ['sexual_minority', 
-              'race', 
-              'age_model',
-              'local',
-              'religion_model',
-              'other',
-              'badwords_koelectra_model',
-              'clean_koelectra_model',
-              'personal_koelectra_model',
-              'gender_model'
+    models = ['성소수자', 
+              '인종국적', 
+              '연령',
+              '지역',
+              '종교',
+              '기타혐오',
+              '악플욕설',
+              'clean',
+              '개인지칭',
+              '성별'
               ]
     PATH = "C:/Users/ME/Desktop/venv/models/"
     for params in models:
-        model = ElectraForSequenceClassification.from_pretrained('monologg/koelectra-small-v2-discriminator')
-        model.classifier.out_proj =  nn.Sequential( nn.Linear(256, 1), nn.Sigmoid() )
+        model = ElectraForSequenceClassification.from_pretrained("kykim/electra-kor-base")
+        model.classifier.out_proj =  nn.Sequential( nn.Linear(768, 1), nn.Sigmoid() )
         try:
             model.load_state_dict(torch.load(PATH + f'{params}.pth', map_location=device)['model_state_dict'])
         except:
