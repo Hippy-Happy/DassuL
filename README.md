@@ -2,7 +2,7 @@
 
 [디스코드 봇 링크](hyperlink)
 
-다썰어는 [monologg님의 koelectra 모델](https://github.com/monologg/KoELECTRA)을 활용한 혐오 표현 탐지 및 분류 모델입니다. 이 깃허브에는 데이터 전처리 코드, 전이학습 코드, 모델 비교, pre-trained model, discord bot 구현을 위한 코드가 들어있습니다. transformers ver와 python ver에서 작업하였고 테스트 되었습니다.
+다썰어는 [kiyoungkim1님의 electra-kor-base](https://github.com/kiyoungkim1/LMkor)를 활용한 혐오 표현 탐지 및 분류 모델입니다. 이 깃허브에는 데이터 전처리 코드, 전이학습 코드, 모델 비교, pre-trained model, discord bot 구현을 위한 코드가 들어있습니다. transformers ver와 python ver에서 작업하였고 테스트 되었습니다.
 
 학습할 때 사용한 디바이스는 google colab과 aws 어쩌구 저쩌구 입니다.
 
