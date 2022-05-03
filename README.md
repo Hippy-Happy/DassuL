@@ -1,6 +1,6 @@
 # 다썰어
 
-[디스코드 봇 링크](hyperlink)
+[디스코드 봇 링크](https://discord.com/oauth2/authorize?client_id=964031115612536902&permissions=8&scope=bot)
 
 다썰어는 [kiyoungkim1님의 electra-kor-base](https://github.com/kiyoungkim1/LMkor)를 활용한 혐오 표현 탐지 및 분류 모델입니다. 이 깃허브에는 데이터 전처리 코드, 전이학습 코드, 모델 비교, pre-trained model, discord bot 구현을 위한 코드가 들어있습니다. transformers ver와 python ver에서 작업하였고 테스트 되었습니다.
 
