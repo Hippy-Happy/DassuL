@@ -9,6 +9,8 @@
 # 1. Architecture
 
 <프로젝트 구조도>
+![image](https://user-images.githubusercontent.com/33687740/166632121-b0b59517-a0f1-4605-8e81-72aa046c19db.png)
+
 
 # 2. 데이터
 
