@@ -2,13 +2,12 @@
 
 [디스코드 봇 링크](https://discord.com/oauth2/authorize?client_id=964031115612536902&permissions=8&scope=bot)
 
-다썰어는 [kiyoungkim1님의 electra-kor-base](https://github.com/kiyoungkim1/LMkor)를 활용한 혐오 표현 탐지 및 분류 모델입니다. 이 깃허브에는 데이터 전처리 코드, 전이학습 코드, 모델 비교, pre-trained model, discord bot 구현을 위한 코드가 들어있습니다. transformers 4.18와 python 3.7에서 작업하였고 테스트 되었습니다.
+다썰어는 [kiyoungkim1님의 electra-kor-base](https://github.com/kiyoungkim1/LMkor)를 활용한 혐오 표현 탐지 및 분류 모델입니다. 이 깃허브에는 데이터 전처리 코드, 전이학습 코드, 모델 비교, pre-trained model, discord bot 구현을 위한 코드가 들어있습니다. 필요한 라이브러리는 requirements.txt에 정리했습니다.
 
-학습할 때 사용한 디바이스는 `google colab`과 `aws`입니다.
+학습할 때 사용한 디바이스는 `google colab - Tesla T4`와 `aws - Tesla K80`입니다.
 
 # 1. Architecture
 
-<프로젝트 구조도>
 ![image](https://user-images.githubusercontent.com/33687740/166632121-b0b59517-a0f1-4605-8e81-72aa046c19db.png)
 
 
@@ -32,7 +31,8 @@
 - 나머지 파라미터는 default값과 동일합니다.
 - 모델의 구조를 간단히 도식화하면 아래와 같습니다.
 
-<모델 사진>
+![image1](https://user-images.githubusercontent.com/55842147/166634145-f07b8b48-cdc7-48a5-96e9-5c2459b7aec1.png)
+
 
 ## 3.2. 비교
 
@@ -59,7 +59,7 @@
 
 
 - 가장 성능이 좋았던 `electra-kor-base` 모델에 추가적인 토큰을 더해서 최종 모델을 만들었고, 이를 활용해 디스코드 봇을 만들었습니다.
--
+
 |모델명|clean|지역|종교|인종국적|연령|악플욕설|성소수자|성별|기타혐오|개인지칭|AVG|
 |---|---|---|---|---|---|---|---|---|---|---|---|
 |electra-kor-base|0.902|0.982|0.979|0.951|0.937|0.826|0.963|0.966|0.975|0.954|0.938|
