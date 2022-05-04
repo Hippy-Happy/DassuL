@@ -1,3 +1,7 @@
+"""
+Created on Fri Apr 15 17:20:16 2022
+@author: seoann
+"""
 import itertools
 from utils import clean_text, LoadDataset, find_label
 import torch
