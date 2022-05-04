@@ -1,3 +1,7 @@
+"""
+Created on Fri Apr 15 17:20:16 2022
+@author: seoann
+"""
 import pandas as pd
 import numpy as np
 from transformers import ElectraModel, ElectraTokenizerFast
