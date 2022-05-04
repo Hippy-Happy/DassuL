@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 """
-Created on Fri Apr 15 17:26:33 2022
-
-@author: ME
+Created on Fri Apr 15 17:20:16 2022
+@author: seoann
 """
 
 import unicodedata
