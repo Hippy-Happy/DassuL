@@ -86,9 +86,10 @@
 # 5. reference
 
 [funnel](https://github.com/kiyoungkim1/LMkor)  
-[koelectra](https://github.com/kiyoungkim1/LMkor)  
+[koelectra](https://github.com/monologg/KoELECTRA)  
 [roberta](https://huggingface.co/klue/roberta-base)  
-[kobert](https://github.com/SKTBrain/KoBERT)  
+[kobert](https://github.com/SKTBrain/KoBERT)
+[electra-kor-base](https://github.com/kiyoungkim1/LMkor)
 [koeran unsmile datsaet](https://github.com/smilegate-ai/korean_unsmile_dataset?fbclid=IwAR0xTlHYCWK0LtrghSL1bPm2su69-LbjisutmcvLlERlHzroMlVpHq3h71g)  
 [apeach](https://github.com/jason9693/APEACH?fbclid=IwAR2ZBPFnv8qSy1RRqISoGkTfqmitoSLz0Fma3iPv4PZJvkZo5lAm9kForo8)  
 [earlystopping](https://github.com/Bjarten/early-stopping-pytorch)  
