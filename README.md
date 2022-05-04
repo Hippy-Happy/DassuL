@@ -16,13 +16,13 @@
 - 학습할 때 사용한 데이터는 [Korean UnSmile Dataset](https://github.com/smilegate-ai/korean_unsmile_dataset?fbclid=IwAR0xTlHYCWK0LtrghSL1bPm2su69-LbjisutmcvLlERlHzroMlVpHq3h71g)과 [APEACH - Korean Hate Speech Evaluation Datasets](https://github.com/jason9693/APEACH?fbclid=IwAR2ZBPFnv8qSy1RRqISoGkTfqmitoSLz0Fma3iPv4PZJvkZo5lAm9kForo8)을 사용했습니다. 
 - Korean UnSmile Dataset의 11가지 혐오 분류 기준에서, "여성/가족"과 "남성"을 "성별"이라는 하나의 분류로 정리하고 모델 학습에 사용했습니다. 상세 데이터 내용은 링크를 통해 확인하시기 바랍니다.
 - `unsmile` 데이터를 카테고리별로 나누고, label의 비율을 50:50으로 구성하여 Dataset을 만들었습니다. 이 Dataset을 8:2로 나누어 trian, test로 나누었고, 다시 train을 train, valid로 나누었습니다.
-- `apeach` 데이터의 카테고리는 `unsmile`과 같지 않습니다. 따라서 `unsmile` 데이터만을 활용한 모델을 통해 `apeach` 데이터를 predicted하고, 이를 검수하는 과정을 통해 두 데이터의 category를 똑같이 만들어서 학습에 활용하였습니다.
-
+- `apeach` 데이터의 카테고리는 `unsmile`과 같지 않습니다. Teacher-Student learning에서 아이디어를 얻어, 따라서 `unsmile` 데이터만을 활용한 모델을 통해 `apeach` 데이터를 predicted하고, 이를 검수하는 과정을 통해 두 데이터의 category를 똑같이 만들어서 학습에 활용하였습니다. 자세한 내용은 3.1. 모델링 부분에서 설명드리겠습니다.
 
 
 # 3. 모델링 및 비교
 ## 3.1. 모델링
 
+### 3.1.1. First model
 - 각 카테고리 별로 binary-classification model을 생성했습니다. 이 모델들은 각 카테고리의 혐오표현이 있으면 1, 없으면 0을 반환합니다.
 - 모델들은 전부 [huggingface의 bert](https://huggingface.co/docs/transformers/main/en/model_doc/bert#bert)를 보고, 마지막 layer에 classification layer를 추가했습니다. 이 layer는 각 모델의 마지막 output만큼을 입력으로 받고, 출력으로 1개의 값을 반환합니다.
 - 모델의 성능을 최대한 높이기 위해 [조기종료 기법](https://github.com/Bjarten/early-stopping-pytorch)을 사용했습니다. 
@@ -31,8 +31,9 @@
 - 나머지 파라미터는 default값과 동일합니다.
 - 모델의 구조를 간단히 도식화하면 아래와 같습니다.
 
-![image1](https://user-images.githubusercontent.com/55842147/166634145-f07b8b48-cdc7-48a5-96e9-5c2459b7aec1.png)
+### 3.1.2. Second model
 
+### 3.1.3. Third model
 
 ## 3.2. 비교
 
