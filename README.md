@@ -85,12 +85,12 @@
 
 # 5. reference
 
-[funnel](https://github.com/kiyoungkim1/LMkor)
-[koelectra](https://github.com/kiyoungkim1/LMkor)
-[roberta](https://huggingface.co/klue/roberta-base)
-[kobert](https://github.com/SKTBrain/KoBERT)
-[koeran unsmile datsaet](https://github.com/smilegate-ai/korean_unsmile_dataset?fbclid=IwAR0xTlHYCWK0LtrghSL1bPm2su69-LbjisutmcvLlERlHzroMlVpHq3h71g)
-[apeach](https://github.com/jason9693/APEACH?fbclid=IwAR2ZBPFnv8qSy1RRqISoGkTfqmitoSLz0Fma3iPv4PZJvkZo5lAm9kForo8)
-[earlystopping](https://github.com/Bjarten/early-stopping-pytorch)
+[funnel](https://github.com/kiyoungkim1/LMkor)  
+[koelectra](https://github.com/kiyoungkim1/LMkor)  
+[roberta](https://huggingface.co/klue/roberta-base)  
+[kobert](https://github.com/SKTBrain/KoBERT)  
+[koeran unsmile datsaet](https://github.com/smilegate-ai/korean_unsmile_dataset?fbclid=IwAR0xTlHYCWK0LtrghSL1bPm2su69-LbjisutmcvLlERlHzroMlVpHq3h71g)  
+[apeach](https://github.com/jason9693/APEACH?fbclid=IwAR2ZBPFnv8qSy1RRqISoGkTfqmitoSLz0Fma3iPv4PZJvkZo5lAm9kForo8)  
+[earlystopping](https://github.com/Bjarten/early-stopping-pytorch)  
 [meta pseudo label](https://arxiv.org/abs/2003.10580)
 
