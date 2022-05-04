@@ -67,7 +67,7 @@
 
 # 4. 시연
 
-![시연영상](https://user-images.githubusercontent.com/42201371/166636655-c63eef6d-7db7-455c-81f4-56fdff275398.gif)
+![시연영상](https://user-images.githubusercontent.com/42201371/166636747-3411db33-48e8-42f7-9a6d-570ea45b296f.gif)
 
 # reference
 
