@@ -83,13 +83,13 @@
 
 ![시연영상](https://user-images.githubusercontent.com/42201371/166636747-3411db33-48e8-42f7-9a6d-570ea45b296f.gif)
 
-# reference
+# 5. reference
 
-[funnel]
-[electra]
-[koelectra]
-[roberta]
-[kobert]
-[koeran unsmile datsaet]
-[apeach]
-[earlystopping]
+[funnel](https://github.com/kiyoungkim1/LMkor)
+[koelectra](https://github.com/kiyoungkim1/LMkor)
+[roberta](https://huggingface.co/klue/roberta-base)
+[kobert](https://github.com/SKTBrain/KoBERT)
+[koeran unsmile datsaet](https://github.com/smilegate-ai/korean_unsmile_dataset?fbclid=IwAR0xTlHYCWK0LtrghSL1bPm2su69-LbjisutmcvLlERlHzroMlVpHq3h71g)
+[apeach](https://github.com/jason9693/APEACH?fbclid=IwAR2ZBPFnv8qSy1RRqISoGkTfqmitoSLz0Fma3iPv4PZJvkZo5lAm9kForo8)
+[earlystopping](https://github.com/Bjarten/early-stopping-pytorch)
+[meta pseudo label](https://arxiv.org/abs/2003.10580)
